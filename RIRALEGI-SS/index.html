@@ -18,6 +18,13 @@
     }
 
     * { box-sizing: border-box; }
+
+    html,
+    body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
     html { scroll-behavior: smooth; }
 
     body {
@@ -75,7 +82,7 @@
     .hero-copy {
       padding-left: 4vw;
       max-width: 520px;
-      word-break: keep-all;
+      overflow-wrap: break-word;
     }
 
     .label {

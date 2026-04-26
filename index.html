@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RIRALEGI LP INDEX</title>
+
+  <style>
+    :root {
+      --bg: #f8f7f3;
+      --paper: #ffffff;
+      --text: #20211f;
+      --muted: #777970;
+      --line: #deded7;
+      --aw: #eadfce;
+      --ss: #e9f3ec;
+      --accent: #6f6d66;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Helvetica Neue", Arial, "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
+      letter-spacing: .04em;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .site-header {
+      height: 72px;
+      padding: 0 44px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--line);
+      background: rgba(248,247,243,.9);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(14px);
+    }
+
+    .brand {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 18px;
+      letter-spacing: .28em;
+      font-weight: 400;
+    }
+
+    .nav {
+      display: flex;
+      gap: 32px;
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: .16em;
+    }
+
+    .page {
+      padding: 64px 44px 84px;
+    }
+
+    .page-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 42px;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 34px;
+      font-weight: 400;
+      letter-spacing: .18em;
+    }
+
+    .lead {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: .12em;
+    }
+
+    .filters a {
+      padding-bottom: 4px;
+      border-bottom: 1px solid transparent;
+    }
+
+    .filters a:hover,
+    .filters a.active {
+      color: var(--text);
+      border-bottom-color: var(--text);
+    }
+
+    .toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 28px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 54px 32px;
+    }
+
+    .item {
+      display: block;
+    }
+
+    .thumb {
+      aspect-ratio: 4 / 3;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+    }
+
+    .thumb-inner {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      place-items: center;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(28px, 4vw, 58px);
+      letter-spacing: .18em;
+      color: #2a2a27;
+      transition: transform .45s ease;
+    }
+
+    .item:hover .thumb-inner {
+      transform: scale(1.03);
+    }
+
+    .thumb.aw {
+      background: linear-gradient(120deg, #fbfaf6, var(--aw));
+    }
+
+    .thumb.ss {
+      background: linear-gradient(120deg, #fbfbf6, var(--ss));
+    }
+
+    .thumb.blank {
+      background:
+        linear-gradient(120deg, rgba(255,255,255,.65), rgba(240,238,232,.75)),
+        repeating-linear-gradient(
+          -45deg,
+          transparent 0,
+          transparent 12px,
+          rgba(0,0,0,.025) 12px,
+          rgba(0,0,0,.025) 13px
+        );
+      color: #aaa69d;
+    }
+
+    .info {
+      padding-top: 18px;
+      display: grid;
+      gap: 5px;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .name {
+      font-size: 13px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .desc {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    .price {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .status {
+      width: max-content;
+      margin-top: 8px;
+      padding: 4px 9px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 10px;
+      letter-spacing: .12em;
+    }
+
+    footer {
+      padding: 34px 44px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: .14em;
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    @media (max-width: 980px) {
+      .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 680px) {
+      .site-header {
+        padding: 0 22px;
+      }
+
+      .nav {
+        display: none;
+      }
+
+      .page {
+        padding: 48px 22px 64px;
+      }
+
+      .page-head {
+        display: block;
+      }
+
+      .filters {
+        margin-top: 22px;
+      }
+
+      .toolbar {
+        display: block;
+        line-height: 2;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      footer {
+        padding: 28px 22px;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="brand" href="./">RIRALEGI</a>
+    <nav class="nav">
+      <a href="#all">ALL</a>
+      <a href="#aw">AW</a>
+      <a href="#ss">SS</a>
+      <a href="#future">FUTURE</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <div class="page-head">
+      <div>
+        <h1>LP INDEX</h1>
+        <p class="lead">シーズン別・商品別のLP一覧です。今後のアイテム追加にも対応できます。</p>
+      </div>
+
+      <div class="filters">
+        <a class="active" href="#all">ALL</a>
+        <a href="#aw">AW</a>
+        <a href="#ss">SS</a>
+        <a href="#future">FUTURE</a>
+      </div>
+    </div>
+
+    <div class="toolbar">
+      <span>View: Landing Pages</span>
+      <span>2 published / add more items below</span>
+    </div>
+
+    <section id="all" class="grid">
+      <!-- 公開中：AW -->
+      <a class="item" id="aw" href="./RIRALEGI-AW/">
+        <div class="thumb aw">
+          <div class="thumb-inner">AW</div>
+        </div>
+        <div class="info">
+          <div class="meta">27AW / LEGGINGS</div>
+          <div class="name">RIRALEGI AW</div>
+          <div class="desc">秋から冬まで、心地よく。プリーツ微起毛・リブ・ベロアの秋冬LP。</div>
+          <div class="price">本体価格 799円 / 税込価格 878円</div>
+          <div class="status">PUBLISHED</div>
+        </div>
+      </a>
+
+      <!-- 公開中：SS -->
+      <a class="item" id="ss" href="./RIRALEGI-SS/">
+        <div class="thumb ss">
+          <div class="thumb-inner">SS</div>
+        </div>
+        <div class="info">
+          <div class="meta">27SS / RELAX SUMMER PANTS</div>
+          <div class="name">RIRALEGI SS</div>
+          <div class="desc">春から夏まで、軽やかに。プリーツから夏パンへつなぐ27SS LP。</div>
+          <div class="price">本体価格 799円 / 税込価格 878円</div>
+          <div class="status">PUBLISHED</div>
+        </div>
+      </a>
+
+      <!-- 追加予定：ここをコピーして増やす -->
+      <a class="item" id="future" href="#">
+        <div class="thumb blank">
+          <div class="thumb-inner">NEXT</div>
+        </div>
+        <div class="info">
+          <div class="meta">NEXT ITEM</div>
+          <div class="name">NEW LP</div>
+          <div class="desc">新しい商品LPを追加する場合は、このカードをコピーしてリンク先を変更します。</div>
+          <div class="price">価格・シーズン情報を入力</div>
+          <div class="status">DRAFT</div>
+        </div>
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <span>RIRALEGI LP INDEX</span>
+    <span>GITHUB PAGES</span>
+  </footer>
+</body>
+</html>

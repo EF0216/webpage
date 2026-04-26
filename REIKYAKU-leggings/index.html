@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>冷脚レギンス | REIKYAKU leggings</title>
+
+  <style>
+    :root {
+      --bg: #f6f5f1;
+      --bg-2: #fbfaf7;
+      --text: #20201d;
+      --sub: #6f6b63;
+      --line: #e3dfd6;
+      --mint: #e9f0ea;
+      --blue: #e9eff7;
+      --cool-bg: #edf7fa;
+      --cool-bg-2: #f7fbfc;
+      --cool-line: #d7e7eb;
+      --cool-accent: #7faebd;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      max-width: 100%;
+      overflow-x: hidden;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Helvetica Neue", Arial, "Hiragino Sans", "Yu Gothic", sans-serif;
+      line-height: 1.8;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    body {
+      letter-spacing: 0.03em;
+    }
+
+    .site-header {
+      border-bottom: 1px solid var(--line);
+      background: rgba(247, 251, 252, 0.96);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(8px);
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 14px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      font-family: Georgia, "Times New Roman", "Yu Mincho", serif;
+      font-size: 14px;
+      letter-spacing: 0.22em;
+      color: #2a2926;
+      white-space: nowrap;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      color: var(--sub);
+      text-transform: uppercase;
+    }
+
+    .section {
+      padding: 86px 28px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* HERO */
+    .hero {
+      padding-top: 22px;
+      background:
+        radial-gradient(circle at 82% 22%, rgba(190, 226, 236, 0.56), transparent 34%),
+        radial-gradient(circle at 18% 88%, rgba(230, 247, 249, 0.88), transparent 36%),
+        linear-gradient(135deg, #f9fcfc 0%, #edf7fa 52%, #e8f3f7 100%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 0.95fr;
+      gap: 54px;
+      align-items: center;
+      min-height: 640px;
+    }
+
+    .hero-kicker {
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      color: #7699a3;
+      margin-bottom: 26px;
+      text-transform: uppercase;
+    }
+
+    .hero-title {
+      font-family: Georgia, "Times New Roman", "Yu Mincho", serif;
+      font-size: clamp(44px, 6vw, 76px);
+      line-height: 1.22;
+      font-weight: 400;
+      margin: 0 0 22px;
+      letter-spacing: 0.04em;
+    }
+
+    .hero-catch {
+      font-family: Georgia, "Times New Roman", "Yu Mincho", serif;
+      font-size: clamp(24px, 2.5vw, 34px);
+      line-height: 1.5;
+      font-weight: 400;
+      margin: 0 0 22px;
+      color: #345f6c;
+    }
+
+    .hero-copy {
+      max-width: 520px;
+      font-size: 14px;
+      color: #66777b;
+      margin: 0 0 28px;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 26px;
+    }
+
+    .meta-box {
+      border: 1px solid var(--cool-line);
+      background: rgba(255, 255, 255, 0.72);
+      padding: 12px 18px;
+      min-width: 136px;
+    }
+
+    .meta-label {
+      font-size: 10px;
+      color: #8b867d;
+      letter-spacing: 0.12em;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+    }
+
+    .meta-value {
+      font-size: 26px;
+      line-height: 1.2;
+      font-family: Georgia, "Times New Roman", "Yu Mincho", serif;
+    }
+
+    .meta-value small {
+      font-size: 14px;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .hero-tags span {
+      border: 1px solid var(--cool-line);
+      padding: 8px 12px;
+      font-size: 12px;
+      color: #4c7783;
+      background: rgba(255, 255, 255, 0.68);
+    }
+
+    .hero-image-wrap {
+      background: rgba(255, 255, 255, 0.52);
+      padding: 0;
+      border: 1px solid var(--cool-line);
+      box-shadow: 0 24px 70px rgba(94, 144, 158, 0.13);
+    }
+
+    .hero-image-wrap img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      background: #f7fbfc;
+    }
+
+    /* COMMON HEADINGS */
+    .section-head {
+      text-align: center;
+      margin-bottom: 42px;
+    }
+
+    .section-label {
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      color: #7d786f;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-family: Georgia, "Times New Roman", "Yu Mincho", serif;
+      font-size: clamp(26px, 3vw, 38px);
+      line-height: 1.5;
+      font-weight: 400;
+      margin: 0 0 10px;
+    }
+
+    .section-sub {
+      font-size: 13px;
+      color: var(--sub);
+      margin: 0;
+    }
+
+    /* FEATURES */
+    .features-wrap {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .feature-card {
+      padding: 34px 24px 30px;
+      border-right: 1px solid var(--line);
+      text-align: center;
+      min-height: 210px;
+    }
+
+    .feature-card:last-child {
+      border-right: none;
+    }
+
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      border: 1px solid #c8c2b7;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #7b766e;
+      background: rgba(255, 255, 255, 0.45);
+    }
+
+    .feature-icon svg {
+      width: 22px;
+      height: 22px;
+      stroke: currentColor;
+      stroke-width: 1.6;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .feature-title {
+      font-family: Georgia, "Times New Roman", "Yu Mincho", serif;
+      font-size: 20px;
+      margin: 0 0 10px;
+      font-weight: 400;
+    }
+
+    .feature-text {
+      font-size: 13px;
+      color: var(--sub);
+      margin: 0;
+      line-height: 1.8;
+    }
+
+    /* LINE UP */
+    .lineup-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .lineup-box {
+      border: 1px solid var(--line);
+      background: #f8f7f3;
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .lineup-box.short .lineup-head {
+      background: var(--mint);
+    }
+
+    .lineup-box.long .lineup-head {
+      background: var(--blue);
+    }
+
+    .lineup-head {
+      padding: 20px 18px;
+      text-align: center;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .lineup-head h3 {
+      margin: 0 0 4px;
+      font-family: Georgia, "Times New Roman", "Yu Mincho", serif;
+      font-size: 20px;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .lineup-head p {
+      margin: 0;
+      font-size: 12px;
+      color: var(--sub);
+    }
+
+    .lineup-body {
+      padding: 18px;
+    }
+
+    .lineup-items {
+      background: rgba(255, 255, 255, 0.55);
+      border: 1px solid #ece8e0;
+      border-radius: 10px;
+      padding: 18px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      min-height: 360px;
+    }
+
+    .lineup-box.long .lineup-items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .length-item {
+      text-align: center;
+    }
+
+    .length-photo {
+      border: 1px solid #ebe7df;
+      background: #fff;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    .length-photo img {
+      width: 100%;
+      aspect-ratio: 3 / 5;
+      object-fit: contain;
+      background: #fff;
+    }
+
+    .length-name {
+      font-family: Georgia, "Times New Roman", "Yu Mincho", serif;
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+
+    .length-caption {
+      font-size: 11px;
+      color: var(--sub);
+      line-height: 1.6;
+    }
+
+    .lineup-note {
+      margin-top: 12px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--sub);
+    }
+
+    /* SCENE */
+    .scene-panel {
+      background: rgba(255, 255, 255, 0.45);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 28px 24px;
+    }
+
+    .scene-grid {
+      display: grid;
+      grid-template-columns: 180px repeat(4, 1fr);
+      gap: 14px;
+      align-items: stretch;
+    }
+
+    .scene-intro {
+      border: 1px dashed #d6d0c4;
+      border-radius: 999px;
+      width: 132px;
+      height: 132px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-family: Georgia, "Times New Roman", "Yu Mincho", serif;
+      font-size: 21px;
+      line-height: 1.6;
+      color: #4f4a43;
+      background: rgba(255, 255, 255, 0.4);
+    }
+
+    .scene-card img {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .scene-card p {
+      margin: 0;
+      text-align: center;
+      font-size: 12px;
+      color: #4f4a43;
+    }
+
+    /* TEXTURE */
+    .texture-box {
+      background: rgba(255, 255, 255, 0.5);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 40px 36px;
+    }
+
+    .texture-title {
+      text-align: center;
+      font-family: Georgia, "Times New Roman", "Yu Mincho", serif;
+      font-size: clamp(28px, 3vw, 46px);
+      line-height: 1.5;
+      margin: 0 0 26px;
+      font-weight: 400;
+    }
+
+    .texture-grid {
+      display: grid;
+      grid-template-columns: 230px 1fr 230px 1fr;
+      gap: 26px;
+      align-items: center;
+    }
+
+    .texture-thumb img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .texture-copy {
+      font-size: 15px;
+      color: #44403a;
+    }
+
+    .texture-copy p {
+      margin: 0 0 12px;
+    }
+
+    /* SPEC */
+    .spec-inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .spec-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: transparent;
+    }
+
+    .spec-table th,
+    .spec-table td {
+      padding: 18px 8px;
+      border-bottom: 1px solid var(--line);
+      font-size: 14px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .spec-table th {
+      width: 180px;
+      color: #8a857c;
+      font-weight: 400;
+    }
+
+    .spec-table td {
+      color: #302e2a;
+    }
+
+    .footer {
+      padding: 30px 20px 60px;
+      text-align: center;
+      color: #8b867d;
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .lineup-grid,
+      .texture-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .scene-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .scene-intro {
+        grid-column: 1 / -1;
+      }
+
+      .lineup-items,
+      .lineup-box.long .lineup-items {
+        grid-template-columns: repeat(2, 1fr);
+        min-height: auto;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .header-inner {
+        padding: 14px 18px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .nav {
+        gap: 14px;
+      }
+
+      .section {
+        padding: 64px 18px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        min-height: auto;
+      }
+
+      .hero {
+        background:
+          radial-gradient(circle at 80% 14%, rgba(190, 226, 236, 0.48), transparent 34%),
+          linear-gradient(180deg, #f9fcfc 0%, #edf7fa 100%);
+      }
+
+      .hero-title {
+        font-size: 42px;
+      }
+
+      .hero-catch {
+        font-size: 24px;
+      }
+
+      .features-grid,
+      .lineup-items,
+      .lineup-box.long .lineup-items,
+      .scene-grid,
+      .texture-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .feature-card {
+        border-right: none;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .feature-card:last-child {
+        border-bottom: none;
+      }
+
+      .scene-intro {
+        width: 120px;
+        height: 120px;
+      }
+
+      .texture-box {
+        padding: 28px 20px;
+      }
+
+      .spec-table,
+      .spec-table tbody,
+      .spec-table tr,
+      .spec-table th,
+      .spec-table td {
+        display: block;
+        width: 100%;
+      }
+
+      .spec-table th {
+        padding-bottom: 6px;
+        border-bottom: none;
+      }
+
+      .spec-table td {
+        padding-top: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">REIKYAKU leggings</div>
+      <nav class="nav">
+        <a href="#lineup">LINE UP</a>
+        <a href="#scene">SCENE</a>
+        <a href="#texture">TEXTURE</a>
+        <a href="#spec">SPEC</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="section hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-copy-area">
+            <div class="hero-kicker">SUMMER COOL LEGGINGS</div>
+
+            <h1 class="hero-title">
+              夏を心地よく。<br>
+              選べるひんやりレギンス
+            </h1>
+
+            <p class="hero-catch">夏の毎日に、ひんやり快適を。</p>
+
+            <p class="hero-copy">
+              1分丈から10分丈まで、装いに合わせて選べる夏レギンス。<br>
+              接触冷感とマチ部メッシュで、暑い日もさらっと心地よく。
+            </p>
+
+            <div class="hero-meta">
+              <div class="meta-box">
+                <div class="meta-label">PRICE</div>
+                <div class="meta-value"><small>本体価格</small> 545円＋税</div>
+              </div>
+            </div>
+
+            <div class="hero-tags">
+              <span>1分丈</span>
+              <span>3分丈</span>
+              <span>5分丈</span>
+              <span>7分丈</span>
+              <span>10分丈</span>
+            </div>
+          </div>
+
+          <div class="hero-image-wrap">
+            <img src="./assets/reikyaku-hero.png" alt="冷脚レギンス メインビジュアル">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="section">
+      <div class="container">
+        <div class="features-wrap">
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M6 5v14"></path>
+                  <path d="M18 5v14"></path>
+                  <path d="M6 8h3"></path>
+                  <path d="M6 12h5"></path>
+                  <path d="M6 16h3"></path>
+                  <path d="M18 8h-3"></path>
+                  <path d="M18 12h-5"></path>
+                  <path d="M18 16h-3"></path>
+                </svg>
+              </div>
+              <h3 class="feature-title">選べる丈</h3>
+              <p class="feature-text">
+                1分・3分・5分・7分・10分。<br>
+                装いに合わせて選べる5丈展開。
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 3v18"></path>
+                  <path d="M7.5 5.5l9 13"></path>
+                  <path d="M16.5 5.5l-9 13"></path>
+                  <path d="M5 12h14"></path>
+                </svg>
+              </div>
+              <h3 class="feature-title">接触冷感</h3>
+              <p class="feature-text">
+                ナイロン素材でひんやり。<br>
+                夏にうれしい涼やかな着用感。
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M6 8c2 0 2 2 4 2s2-2 4-2 2 2 4 2"></path>
+                  <path d="M6 12c2 0 2 2 4 2s2-2 4-2 2 2 4 2"></path>
+                  <path d="M6 16c2 0 2 2 4 2s2-2 4-2 2 2 4 2"></path>
+                </svg>
+              </div>
+              <h3 class="feature-title">通気性</h3>
+              <p class="feature-text">
+                マチ部はメッシュ仕様。<br>
+                ムレが気になる季節も快適に。
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M8 7c0-2 1.5-3 4-3s4 1 4 3"></path>
+                  <path d="M6 8h12"></path>
+                  <path d="M7 8v10"></path>
+                  <path d="M17 8v10"></path>
+                  <path d="M7 18h10"></path>
+                </svg>
+              </div>
+              <h3 class="feature-title">使いやすい</h3>
+              <p class="feature-text">
+                ワンピースやスカート、<br>
+                さまざまな夏スタイルに。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LINE UP -->
+    <section id="lineup" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-label">LINE UP</div>
+          <h2 class="section-title">LENGTH LINE UP</h2>
+          <p class="section-sub">装いに合わせて選べる、5丈ラインアップ。</p>
+        </div>
+
+        <div class="lineup-grid">
+          <div class="lineup-box short">
+            <div class="lineup-head">
+              <h3>SHORT</h3>
+              <p>1分丈・3分丈・5分丈</p>
+            </div>
+
+            <div class="lineup-body">
+              <div class="lineup-items">
+                <div class="length-item">
+                  <div class="length-photo">
+                    <img src="./assets/reikyaku-1bu.png" alt="1分丈">
+                  </div>
+                  <div class="length-name">1分丈</div>
+                  <div class="length-caption">短めボトムの<br>インナーに。</div>
+                </div>
+
+                <div class="length-item">
+                  <div class="length-photo">
+                    <img src="./assets/reikyaku-3bu.png" alt="3分丈">
+                  </div>
+                  <div class="length-name">3分丈</div>
+                  <div class="length-caption">スカートや<br>ワンピースの下に。</div>
+                </div>
+
+                <div class="length-item">
+                  <div class="length-photo">
+                    <img src="./assets/reikyaku-5bu.png" alt="5分丈">
+                  </div>
+                  <div class="length-name">5分丈</div>
+                  <div class="length-caption">ひざ上までの<br>安心感。</div>
+                </div>
+              </div>
+
+              <div class="lineup-note">軽やかに取り入れやすい、短め丈シリーズ。</div>
+            </div>
+          </div>
+
+          <div class="lineup-box long">
+            <div class="lineup-head">
+              <h3>LONG</h3>
+              <p>7分丈・10分丈</p>
+            </div>
+
+            <div class="lineup-body">
+              <div class="lineup-items">
+                <div class="length-item">
+                  <div class="length-photo">
+                    <img src="./assets/reikyaku-7bu.png" alt="7分丈">
+                  </div>
+                  <div class="length-name">7分丈</div>
+                  <div class="length-caption">足元を軽やかに見せる<br>バランス丈。</div>
+                </div>
+
+                <div class="length-item">
+                  <div class="length-photo">
+                    <img src="./assets/reikyaku-10bu.png" alt="10分丈">
+                  </div>
+                  <div class="length-name">10分丈</div>
+                  <div class="length-caption">足首までしっかり<br>カバー。</div>
+                </div>
+              </div>
+
+              <div class="lineup-note">冷房対策や日差し対策にも使いやすい、長め丈シリーズ。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE -->
+    <section id="scene" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-label">SCENE</div>
+          <h2 class="section-title">いろんなシーンに活躍</h2>
+          <p class="section-sub">夏の毎日に、ちょうどいいはき心地。</p>
+        </div>
+
+        <div class="scene-panel">
+          <div class="scene-grid">
+            <div class="scene-intro">
+              いろんな<br>シーンで<br>活躍
+            </div>
+
+            <div class="scene-card">
+              <img src="./assets/reikyaku-scene-1.png" alt="ワンピースの下に">
+              <p>ワンピースの下に</p>
+            </div>
+
+            <div class="scene-card">
+              <img src="./assets/reikyaku-scene-2.png" alt="ちょっとしたお出かけに">
+              <p>ちょっとしたお出かけに</p>
+            </div>
+
+            <div class="scene-card">
+              <img src="./assets/reikyaku-scene-3.png" alt="旅行やレジャーに">
+              <p>旅行やレジャーに</p>
+            </div>
+
+            <div class="scene-card">
+              <img src="./assets/reikyaku-scene-4.png" alt="冷房対策にもおすすめ">
+              <p>冷房対策にもおすすめ</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEXTURE -->
+    <section id="texture" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-label">TEXTURE</div>
+          <h2 class="section-title">ひんやり感と通気性で、暑い季節も心地よく。</h2>
+          </p>
+        </div>
+
+        <div class="texture-box">
+          <h3 class="texture-title">さらっと快適な素材感</h3>
+
+          <div class="texture-grid">
+            <div class="texture-thumb">
+              <img src="./assets/reikyaku-texture-1.png" alt="素材アップ">
+            </div>
+
+            <div class="texture-copy">
+              <p>軽くてやわらかく、肌になじみやすいナイロン素材。</p>
+              <p>まとわりつきにくく、さらっとしたはき心地です。</p>
+            </div>
+
+            <div class="texture-thumb">
+              <img src="./assets/reikyaku-texture-2.png" alt="メッシュ仕様">
+            </div>
+
+            <div class="texture-copy">
+              <p>接触冷感でひんやり快適。</p>
+              <p>さらにマチ部はメッシュ仕様で、暑い季節も心地よく過ごせます。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPEC -->
+    <section id="spec" class="section">
+      <div class="container spec-inner">
+        <div class="section-head">
+          <div class="section-label">SPEC</div>
+          <h2 class="section-title">商品情報</h2>
+        </div>
+
+        <table class="spec-table">
+          <tr>
+            <th>商品名</th>
+            <td>冷脚レギンス</td>
+          </tr>
+          <tr>
+            <th>ロゴ表記</th>
+            <td>REIKYAKU leggings</td>
+          </tr>
+          <tr>
+            <th>本体価格</th>
+            <td>545円＋税</td>
+          </tr>
+          <tr>
+            <th>展開丈</th>
+            <td>1分丈 / 3分丈 / 5分丈 / 7分丈 / 10分丈</td>
+          </tr>
+          <tr>
+            <th>機能</th>
+            <td>接触冷感 / 通気性アップ</td>
+          </tr>
+          <tr>
+            <th>仕様</th>
+            <td>マチ部メッシュ生地</td>
+          </tr>
+          <tr>
+            <th>素材特徴</th>
+            <td>ナイロン素材でひんやり</td>
+          </tr>
+          <tr>
+            <th>カラー</th>
+            <td>ブラック</td>
+          </tr>
+          <tr>
+            <th>サイズ</th>
+            <td>S-M / M-L / L-LL / JM-L</td>
+          </tr>
+          <tr>
+            <th>展開時期</th>
+            <td>春夏シーズン</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    REIKYAKU LEGGINGS
+  </footer>
+
+</body>
+</html>

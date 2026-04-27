@@ -158,22 +158,24 @@
     .meta-box {
       border: 1px solid var(--cool-line);
       background: rgba(255, 255, 255, 0.72);
-      padding: 12px 18px;
-      min-width: 136px;
+      padding: 12px 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
     }
 
     .meta-label {
-      font-size: 10px;
+      font-size: 13px;
       color: #8b867d;
-      letter-spacing: 0.12em;
-      margin-bottom: 4px;
-      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      white-space: nowrap;
     }
 
     .meta-value {
-      font-size: 26px;
+      font-size: 28px;
       line-height: 1.2;
       font-family: Georgia, "Times New Roman", "Yu Mincho", serif;
+      white-space: nowrap;
     }
 
     .meta-value small {
@@ -671,8 +673,8 @@
 
             <div class="hero-meta">
               <div class="meta-box">
-                <div class="meta-label">本体価格</div>
-                <div class="meta-value">545円＋税</div>
+                <span class="meta-label">本体価格</span>
+                <span class="meta-value">545円＋税</span>
               </div>
             </div>
 

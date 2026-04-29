@@ -125,11 +125,16 @@
 
     .hero-title {
       font-family: Georgia, "Times New Roman", "Yu Mincho", serif;
-      font-size: clamp(44px, 6vw, 76px);
+      font-size: clamp(40px, 4.8vw, 64px);
       line-height: 1.22;
       font-weight: 400;
       margin: 0 0 22px;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-title .line {
+      display: block;
+      white-space: nowrap;
     }
 
     .hero-catch {
@@ -620,7 +625,7 @@
       }
 
       .hero-title {
-        font-size: 42px;
+        font-size: clamp(30px, 8.2vw, 42px);
       }
 
       .hero-catch {
@@ -702,8 +707,8 @@
             <div class="hero-kicker">SUMMER COOL PRESSURE</div>
 
             <h1 class="hero-title">
-              ひんやり、すっきり。<br>
-              夏の脚をきれいに。
+              <span class="line">ひんやり、すっきり。</span>
+              <span class="line">夏の脚をきれいに。</span>
             </h1>
 
             <p class="hero-catch">夏の毎日に、ひんやり快適を。</p>

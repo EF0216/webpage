@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>着圧裏パイルソックス | Hot Pressure Legwear</title>
+
+  <style>
+    :root {
+      --bg: #f8f5f0;
+      --bg-2: #fdfaf6;
+      --text: #20201d;
+      --sub: #706a5e;
+      --line: #e5ddd1;
+      --warm: #f5e8d4;
+      --amber: #e8c98a;
+      --day-bg: #fdf0e0;
+      --night-bg: #e8eaf6;
+      --warm-accent: #c28a3a;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      max-width: 100%;
+      overflow-x: hidden;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Helvetica Neue", Arial, "Hiragino Sans", "Yu Gothic", sans-serif;
+      line-height: 1.8;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    body {
+      letter-spacing: 0.03em;
+    }
+
+    .site-header {
+      border-bottom: 1px solid var(--line);
+      background: rgba(248, 245, 240, 0.96);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(8px);
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 14px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      font-family: Georgia, "Times New Roman", "Yu Mincho", serif;
+      font-size: 14px;
+      letter-spacing: 0.22em;
+      color: #2a2620;
+      white-space: nowrap;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      color: var(--sub);
+      text-transform: uppercase;
+    }
+
+    .section {
+      padding: 86px 28px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* HERO */
+    .hero {
+      padding-top: 22px;
+      background:
+        radial-gradient(circle at 80% 20%, rgba(220, 160, 60, 0.28), transparent 36%),
+        radial-gradient(circle at 16% 86%, rgba(240, 220, 180, 0.72), transparent 38%),
+        linear-gradient(135deg, #fdfaf5 0%, #f8edd6 52%, #f3e4c4 100%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 0.95fr;
+      gap: 54px;
+      align-items: center;
+      min-height: 640px;
+    }
+
+    .hero-kicker {
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      color: #9a7840;
+      margin-bottom: 26px;
+      text-transform: uppercase;
+    }
+
+    .hero-title {
+      font-family: Georgia, "Times New Roman", "Yu Mincho", serif;
+      font-size: clamp(40px, 4.8vw, 64px);
+      line-height: 1.22;
+      font-weight: 400;
+      margin: 0 0 22px;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-title .line {
+      display: block;
+      white-space: nowrap;
+    }
+
+    .hero-catch {
+      font-family: Georgia, "Times New Roman", "Yu Mincho", serif;
+      font-size: clamp(22px, 2.4vw, 32px);
+      line-height: 1.5;
+      font-weight: 400;
+      margin: 0 0 22px;
+      color: #7a5220;
+    }
+
+    .hero-copy {
+      max-width: 520px;
+      font-size: 14px;
+      color: #7a6b57;
+      margin: 0 0 28px;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 26px;
+    }
+
+    .meta-box {
+      border: 1px solid #dbc99a;
+      background: rgba(255, 255, 255, 0.72);
+      padding: 12px 18px;
+      min-width: 166px;
+    }
+
+    .meta-label {
+      font-size: 10px;
+      color: #8b7a5a;
+      letter-spacing: 0.12em;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+    }
+
+    .meta-value {
+      font-size: 22px;
+      line-height: 1.25;
+      font-family: Georgia, "Times New Roman", "Yu Mincho", serif;
+    }
+
+    .meta-value small {
+      font-size: 13px;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+    }
+
+    .tax-price {
+      margin-top: 4px;
+      color: #8a7860;
+      font-size: 12px;
+      letter-spacing: 0.06em;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .hero-tags span {
+      border: 1px solid #dbc99a;
+      padding: 8px 12px;
+      font-size: 12px;
+      color: #7a5a2a;
+      background: rgba(255, 255, 255, 0.68);
+    }
+
+    .hero-image-wrap {
+      background: rgba(255, 255, 255, 0.52);
+      border: 1px solid #dbc99a;
+      box-shadow: 0 24px 70px rgba(160, 110, 30, 0.13);
+    }
+
+    .hero-image-wrap img,
+    .hero-image-wrap .asset-ph {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      background: #fdf5e6;
+    }
+
+    .asset-ph {
+      display: grid;
+      place-items: center;
+      color: #b09060;
+      font-size: 12px;
+      letter-spacing: .18em;
+      text-align: center;
+      line-height: 1.8;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,.82), rgba(248,237,210,.72)),
+        repeating-linear-gradient(-45deg, rgba(194,138,58,.10) 0 10px, rgba(255,255,255,.34) 10px 20px);
+    }
+
+    /* COMMON HEADINGS */
+    .section-head {
+      text-align: center;
+      margin-bottom: 42px;
+    }
+
+    .section-label {
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      color: #9a7840;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-family: Georgia, "Times New Roman", "Yu Mincho", serif;
+      font-size: clamp(26px, 3vw, 38px);
+      line-height: 1.5;
+      font-weight: 400;
+      margin: 0 0 10px;
+    }
+
+    .section-sub {
+      font-size: 13px;
+      color: var(--sub);
+      margin: 0;
+    }
+
+    /* FEATURES */
+    .features-wrap {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.22);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .feature-card {
+      padding: 34px 24px 30px;
+      border-right: 1px solid var(--line);
+      text-align: center;
+      min-height: 210px;
+    }
+
+    .feature-card:last-child {
+      border-right: none;
+    }
+
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      border: 1px solid #c8bba7;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #9a7840;
+      background: rgba(255, 255, 255, 0.45);
+    }
+
+    .feature-icon svg {
+      width: 22px;
+      height: 22px;
+      stroke: currentColor;
+      stroke-width: 1.6;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .feature-title {
+      font-family: Georgia, "Times New Roman", "Yu Mincho", serif;
+      font-size: 20px;
+      margin: 0 0 10px;
+      font-weight: 400;
+    }
+
+    .feature-text {
+      font-size: 13px;
+      color: var(--sub);
+      margin: 0;
+      line-height: 1.8;
+    }
+
+    /* LINE UP */
+    .lineup-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .lineup-box {
+      border: 1px solid var(--line);
+      background: #fdfaf6;
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .lineup-box.day .lineup-head {
+      background: var(--day-bg);
+    }
+
+    .lineup-box.night .lineup-head {
+      background: var(--night-bg);
+    }
+
+    .lineup-head {
+      padding: 20px 18px;
+      text-align: center;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .lineup-head h3 {
+      margin: 0 0 4px;
+      font-family: Georgia, "Times New Roman", "Yu Mincho", serif;
+      font-size: 20px;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+    }
+
+    .lineup-head p {
+      margin: 0;
+      font-size: 12px;
+      color: var(--sub);
+    }
+
+    .lineup-body {
+      padding: 18px;
+    }
+
+    .lineup-items {
+      background: rgba(255, 255, 255, 0.55);
+      border: 1px solid #ece4d8;
+      border-radius: 10px;
+      padding: 18px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      min-height: 360px;
+    }
+
+    .length-item {
+      text-align: center;
+    }
+
+    .length-photo {
+      border: 1px solid #ece4d8;
+      background: #fff;
+      padding: 10px;
+      margin: 0 auto 10px;
+      max-width: 260px;
+      width: 100%;
+    }
+
+    .length-photo img,
+    .length-photo .asset-ph {
+      width: 100%;
+      aspect-ratio: 3 / 5;
+      object-fit: contain;
+      background: #fff;
+    }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      max-width: 520px;
+      margin: 0 auto 14px;
+    }
+
+    .photo-grid .length-photo {
+      margin: 0;
+      max-width: none;
+      padding: 8px;
+    }
+
+    .photo-grid .length-photo img,
+    .photo-grid .length-photo .asset-ph {
+      aspect-ratio: 4 / 5;
+    }
+
+    .length-name {
+      font-family: Georgia, "Times New Roman", "Yu Mincho", serif;
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+
+    .length-caption {
+      font-size: 11px;
+      color: var(--sub);
+      line-height: 1.6;
+    }
+
+    .lineup-note {
+      margin-top: 12px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--sub);
+    }
+
+    /* SCENE */
+    .scene-panel {
+      background: rgba(255, 255, 255, 0.45);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 28px 24px;
+    }
+
+    .scene-grid {
+      display: grid;
+      grid-template-columns: 180px repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      align-items: stretch;
+    }
+
+    .scene-intro {
+      border: 1px dashed #c8baa8;
+      border-radius: 999px;
+      width: 132px;
+      height: 132px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-family: Georgia, "Times New Roman", "Yu Mincho", serif;
+      font-size: 21px;
+      line-height: 1.6;
+      color: #4f4638;
+      background: rgba(255, 255, 255, 0.4);
+    }
+
+    .scene-card img,
+    .scene-card .asset-ph {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .scene-card p {
+      margin: 0;
+      text-align: center;
+      font-size: 12px;
+      color: #4f4638;
+    }
+
+    /* TEXTURE */
+    .texture-box {
+      background: rgba(255, 255, 255, 0.5);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 40px 36px;
+    }
+
+    .texture-title {
+      text-align: center;
+      font-family: Georgia, "Times New Roman", "Yu Mincho", serif;
+      font-size: clamp(28px, 3vw, 46px);
+      line-height: 1.5;
+      margin: 0 0 26px;
+      font-weight: 400;
+    }
+
+    .texture-grid {
+      display: grid;
+      grid-template-columns: 230px 1fr 230px 1fr;
+      gap: 26px;
+      align-items: center;
+    }
+
+    .texture-thumb img,
+    .texture-thumb .asset-ph {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .texture-copy {
+      font-size: 15px;
+      color: #44403a;
+    }
+
+    .texture-copy p {
+      margin: 0 0 12px;
+    }
+
+    /* SPEC */
+    .spec-inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .spec-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: transparent;
+    }
+
+    .spec-table th,
+    .spec-table td {
+      padding: 18px 8px;
+      border-bottom: 1px solid var(--line);
+      font-size: 14px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .spec-table th {
+      width: 180px;
+      color: #9a8870;
+      font-weight: 400;
+    }
+
+    .spec-table td {
+      color: #302e2a;
+    }
+
+    .footer {
+      padding: 30px 20px 60px;
+      text-align: center;
+      color: #9a8870;
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .lineup-grid,
+      .texture-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .scene-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .scene-intro {
+        grid-column: 1 / -1;
+      }
+
+      .lineup-items {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .header-inner {
+        padding: 14px 18px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .nav {
+        gap: 14px;
+      }
+
+      .section {
+        padding: 64px 18px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        min-height: auto;
+      }
+
+      .hero {
+        background:
+          radial-gradient(circle at 80% 14%, rgba(220, 160, 60, 0.36), transparent 36%),
+          linear-gradient(180deg, #fdfaf5 0%, #f8edd6 100%);
+      }
+
+      .hero-title {
+        font-size: clamp(30px, 8.2vw, 42px);
+      }
+
+      .hero-catch {
+        font-size: 22px;
+      }
+
+      .features-grid,
+      .lineup-items,
+      .scene-grid,
+      .texture-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .photo-grid {
+        grid-template-columns: 1fr;
+        max-width: 260px;
+      }
+
+      .feature-card {
+        border-right: none;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .feature-card:last-child {
+        border-bottom: none;
+      }
+
+      .scene-intro {
+        width: 120px;
+        height: 120px;
+      }
+
+      .texture-box {
+        padding: 28px 20px;
+      }
+
+      .spec-table,
+      .spec-table tbody,
+      .spec-table tr,
+      .spec-table th,
+      .spec-table td {
+        display: block;
+        width: 100%;
+      }
+
+      .spec-table th {
+        padding-bottom: 6px;
+        border-bottom: none;
+      }
+
+      .spec-table td {
+        padding-top: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">Hot Pressure Legwear</div>
+      <nav class="nav">
+        <a href="#lineup">LINE UP</a>
+        <a href="#scene">SCENE</a>
+        <a href="#texture">TEXTURE</a>
+        <a href="#spec">SPEC</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="section hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-copy-area">
+            <div class="hero-kicker">WARM PRESSURE SOCKS</div>
+
+            <h1 class="hero-title">
+              <span class="line">あたたかく、すっきり。</span>
+              <span class="line">冬の脚をきれいに。</span>
+            </h1>
+
+            <p class="hero-catch">裏パイルの包まれる温もりと着圧で、冬を快適に。</p>
+
+            <p class="hero-copy">
+              ふんわり裏パイル素材と着圧設計で、寒い日も心地よく。<br>
+              昼用・夜用の2タイプ展開で、一日中サポートする冬の着圧ソックス。
+            </p>
+
+            <div class="hero-meta">
+              <div class="meta-box">
+                <div class="meta-label">DAY TYPE</div>
+                <div class="meta-value"><small>本体価格</small> 249円</div>
+                <div class="tax-price">税込価格 273円</div>
+              </div>
+              <div class="meta-box">
+                <div class="meta-label">NIGHT TYPE</div>
+                <div class="meta-value"><small>本体価格</small> 249円</div>
+                <div class="tax-price">税込価格 273円</div>
+              </div>
+            </div>
+
+            <div class="hero-tags">
+              <span>昼用</span>
+              <span>夜用</span>
+              <span>23-25cm</span>
+            </div>
+          </div>
+
+          <div class="hero-image-wrap">
+            <img src="assets/hero.png" alt="着圧裏パイルソックス メインビジュアル">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="section">
+      <div class="container">
+        <div class="features-wrap">
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 3c-2.5 5-2.5 13 0 18"></path>
+                  <path d="M8 6c-1.5 3.5-1.5 8.5 0 12"></path>
+                  <path d="M16 6c1.5 3.5 1.5 8.5 0 12"></path>
+                  <path d="M5 12h14"></path>
+                </svg>
+              </div>
+              <h3 class="feature-title">昼夜2タイプ</h3>
+              <p class="feature-text">
+                昼間用・夜用の2タイプ。<br>
+                生活シーンに合わせて選べる。
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 2a5 5 0 0 1 5 5c0 5-5 11-5 11S7 12 7 7a5 5 0 0 1 5-5z"></path>
+                  <circle cx="12" cy="7" r="2"></circle>
+                </svg>
+              </div>
+              <h3 class="feature-title">裏パイル</h3>
+              <p class="feature-text">
+                内側のふんわりパイル素材が、<br>
+                やさしく包むあたたかさ。
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M6 8c2 0 2 2 4 2s2-2 4-2 2 2 4 2"></path>
+                  <path d="M6 12c2 0 2 2 4 2s2-2 4-2 2 2 4 2"></path>
+                  <path d="M6 16c2 0 2 2 4 2s2-2 4-2 2 2 4 2"></path>
+                </svg>
+              </div>
+              <h3 class="feature-title">着圧設計</h3>
+              <p class="feature-text">
+                脚まわりをほどよくサポート。<br>
+                すっきり美脚見え。
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 3v5"></path>
+                  <path d="M5.6 5.6l3.5 3.5"></path>
+                  <path d="M3 12h5"></path>
+                  <path d="M5.6 18.4l3.5-3.5"></path>
+                  <path d="M12 16v5"></path>
+                  <path d="M18.4 18.4l-3.5-3.5"></path>
+                  <path d="M21 12h-5"></path>
+                  <path d="M18.4 5.6l-3.5 3.5"></path>
+                </svg>
+              </div>
+              <h3 class="feature-title">冷え対策に</h3>
+              <p class="feature-text">
+                足元の冷えが気になる季節に。<br>
+                室内でも外出先でも活躍。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LINE UP -->
+    <section id="lineup" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-label">LINE UP</div>
+          <h2 class="section-title">HOT PRESSURE LINE UP</h2>
+          <p class="section-sub">昼用・夜用の2タイプ展開。生活リズムに合わせてお選びください。</p>
+        </div>
+
+        <div class="lineup-grid">
+          <div class="lineup-box day">
+            <div class="lineup-head">
+              <h3>DAY TYPE</h3>
+              <p>昼用 着圧裏パイルソックス</p>
+            </div>
+
+            <div class="lineup-body">
+              <div class="lineup-items">
+                <div class="length-item">
+                  <div class="photo-grid">
+                    <div class="length-photo">
+                      <img src="assets/lineup_day.png" alt="昼用着圧裏パイルソックス 商品画像">
+                    </div>
+                    <div class="length-photo">
+                      <img src="assets/lineup_day_wearing.png" alt="昼用着圧裏パイルソックス 着用イメージ">
+                    </div>
+                  </div>
+                  <div class="length-name">昼用</div>
+                  <div class="length-caption">
+                    日中の活動をしっかりサポート。<br>
+                    本体249円 / 税込273円
+                  </div>
+                </div>
+              </div>
+
+              <div class="lineup-note">通勤・お出かけ・日常使いにちょうどいい着圧設計。</div>
+            </div>
+          </div>
+
+          <div class="lineup-box night">
+            <div class="lineup-head">
+              <h3>NIGHT TYPE</h3>
+              <p>夜用 着圧裏パイルソックス</p>
+            </div>
+
+            <div class="lineup-body">
+              <div class="lineup-items">
+                <div class="length-item">
+                  <div class="photo-grid">
+                    <div class="length-photo">
+                      <img src="assets/lineup_night.png" alt="夜用着圧裏パイルソックス 商品画像">
+                    </div>
+                    <div class="length-photo">
+                      <img src="assets/lineup_night_wearing.png" alt="夜用着圧裏パイルソックス 着用イメージ">
+                    </div>
+                  </div>
+                  <div class="length-name">夜用</div>
+                  <div class="length-caption">
+                    就寝中もやさしくサポート。<br>
+                    本体249円 / 税込273円
+                  </div>
+                </div>
+              </div>
+
+              <div class="lineup-note">夜間のむくみ・冷えが気になる方に。やわらかな着圧感。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE -->
+    <section id="scene" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-label">SCENE</div>
+          <h2 class="section-title">いろんなシーンに活躍</h2>
+          <p class="section-sub">寒い季節の毎日に、温もりと快適さを。</p>
+        </div>
+
+        <div class="scene-panel">
+          <div class="scene-grid">
+            <div class="scene-intro">
+              冬の<br>毎日に<br>活躍
+            </div>
+
+            <div class="scene-card">
+              <img src="assets/scene_commute.png" alt="通勤・通学に">
+              <p>通勤・通学に</p>
+            </div>
+
+            <div class="scene-card">
+              <img src="assets/scene_home.png" alt="おうち時間に">
+              <p>おうち時間に</p>
+            </div>
+
+            <div class="scene-card">
+              <img src="assets/scene_outing.png" alt="お出かけに">
+              <p>お出かけに</p>
+            </div>
+
+            <div class="scene-card">
+              <img src="assets/scene_sleep.png" alt="就寝中にも">
+              <p>就寝中にも</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEXTURE -->
+    <section id="texture" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-label">TEXTURE</div>
+          <h2 class="section-title">裏パイルの温もりと着圧で、冬も心地よく。</h2>
+        </div>
+
+        <div class="texture-box">
+          <h3 class="texture-title">ふんわり包まれる素材感</h3>
+
+          <div class="texture-grid">
+            <div class="texture-thumb">
+              <img src="assets/texture_pile.png" alt="裏パイル素材">
+            </div>
+
+            <div class="texture-copy">
+              <p>内側のパイル素材が肌にやさしくフィット。</p>
+              <p>ふわっとした肌触りで、足元をあたたかく包みます。</p>
+            </div>
+
+            <div class="texture-thumb">
+              <img src="assets/texture_pressure.png" alt="着圧素材イメージ">
+            </div>
+
+            <div class="texture-copy">
+              <p>適度な着圧が脚まわりをやさしく締め付け。</p>
+              <p>一日のむくみや疲れが気になる方におすすめです。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPEC -->
+    <section id="spec" class="section">
+      <div class="container spec-inner">
+        <div class="section-head">
+          <div class="section-label">SPEC</div>
+          <h2 class="section-title">商品情報</h2>
+        </div>
+
+        <table class="spec-table">
+          <tr>
+            <th>商品名</th>
+            <td>着圧裏パイルソックス</td>
+          </tr>
+          <tr>
+            <th>ロゴ表記</th>
+            <td>Hot Pressure Legwear</td>
+          </tr>
+          <tr>
+            <th>価格</th>
+            <td>本体価格 249円 / 税込価格 273円</td>
+          </tr>
+          <tr>
+            <th>展開型</th>
+            <td>昼用 / 夜用</td>
+          </tr>
+          <tr>
+            <th>サイズ</th>
+            <td>23-25cm</td>
+          </tr>
+          <tr>
+            <th>機能</th>
+            <td>着圧設計 / 裏パイル / あたたか仕様</td>
+          </tr>
+          <tr>
+            <th>展開時期</th>
+            <td>秋冬シーズン</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    HOT PRESSURE LEGWEAR
+  </footer>
+
+</body>
+</html>
